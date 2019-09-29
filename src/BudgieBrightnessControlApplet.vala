@@ -248,7 +248,7 @@ public class Applet : Budgie.Applet
                 out ls_stderr,
                 out ls_status);
 
-            return int.parse(ls_stdout);
+            return (int)Math.round(double.parse(ls_stdout));
         } catch(SpawnError e){
             error(e.message);
         }

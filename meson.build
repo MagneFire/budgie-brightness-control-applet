@@ -35,6 +35,9 @@ dep_glib = dependency('glib-2.0', version: '>= 2.46.0')
 dep_peas = dependency('libpeas-1.0', version: '>= 1.8.0')
 dep_budgie = dependency('budgie-1.0', version: '>= 2')
 
+cc = meson.get_compiler('c')
+dep_math = cc.find_library('m', required : false)
+
 LIB_INSTALL_DIR = join_paths(get_option('prefix'), get_option('libdir'), 'budgie-desktop', 'plugins', meson.project_name())
 
 subdir('src')

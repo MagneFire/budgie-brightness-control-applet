@@ -17,6 +17,7 @@ applet_budgie_brightness_control_deps = [
     dep_glib,
     dep_peas,
     dep_budgie,
+    dep_math,
 ]
 
 shared_library(
